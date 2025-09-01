@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy
+import os
 
 def leer_flotantes(archivo):
     """
@@ -18,18 +19,21 @@ def leer_flotantes(archivo):
     return numeros
 
 # Ejemplo de uso
+# Ruta de la carpeta "Mediciones" relativa al archivo actual
+BASE_DIR = os.path.dirname(__file__)
+ruta = os.path.join(BASE_DIR, "Mediciones")
 
-y5 = leer_flotantes("5.txt")
-y15 = leer_flotantes("15.txt")
-y25 = leer_flotantes("25.txt")
-y35 = leer_flotantes("35.txt")
-y45 = leer_flotantes("45.txt")
-y55 = leer_flotantes("55.txt")
-y65 = leer_flotantes("65.txt")
-y75 = leer_flotantes("75.txt")
-y85 = leer_flotantes("85.txt")
-y95 = leer_flotantes("95.txt")
-y100 = leer_flotantes("100.txt")
+y5 = leer_flotantes(f"{ruta}/5.txt")
+y15 = leer_flotantes(f"{ruta}/15.txt")
+y25 = leer_flotantes(f"{ruta}/25.txt")
+y35 = leer_flotantes(f"{ruta}/35.txt")
+y45 = leer_flotantes(f"{ruta}/45.txt")
+y55 = leer_flotantes(f"{ruta}/55.txt")
+y65 = leer_flotantes(f"{ruta}/65.txt")
+y75 = leer_flotantes(f"{ruta}/75.txt")
+y85 = leer_flotantes(f"{ruta}/85.txt")
+y95 = leer_flotantes(f"{ruta}/95.txt")
+y100 = leer_flotantes(f"{ruta}/100.txt")
 
 
 x5 = [5.0 for i in range (10)]
